@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Font Awesome Linkage -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+    <!-- Font Linkage -->
+    <link href="https://fonts.googleapis.com/css2?family=Grenze+Gotisch:wght@100;200;300;400;500;600;700;800;900&family=Ruda:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- Bootstrap CSS Linkage -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <!-- CSS Linkage -->
+    <link rel="stylesheet" type="text/css" href="step2.css">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <title>Skill Safari | Rock, Paper, Scissors</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@300;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <section class="my-5">
+        <div class="container top bg-transparent">
+            <div class="d-flex flex-row ">
+                <div class="col-md-9">
+                    <img src="images/logo.svg" alt="logo" class="img-fluid m-4 h-75 ">
+                </div>
+                <div class="col-md-2 bg-light score-block  py-3 ml-5 my-4">
+                    <h4 class="text-center score">S C O R E</h4>
+                    <p id="score" class="  display-md-3 display-4  text-center font-weight-bolder"></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="font">
+        <div class="container text-center">
+            <div class="row">
+                <div class="col-4 mx-auto order-1">
+                    <div class="d-flex flex-column">
+                        <div class="order-2 order-md-1">
+                            <h3 id="titleOne" class="text-center text-white mb-5">YOU PICKED</h3>
+                        </div>
+                        <div id="one" class="order-1 order-md-2">
+                            <img src="images/icon-paper.svg" alt="paper" id="userImg1" class="text-center respUser paper d-none">
+                            <img src="images/icon-scissors.svg" alt="scissors" id="userImg2" class="text-center respUser scissors d-none">
+                            <img src="images/icon-rock.svg" alt="rock" id="userImg3" class="text-center respUser rock d-none">
+                        </div>
+                    </div>
+                </div>
+                <div id="lose" class="col-4 my-auto d-none">
+                    <p class="display-4 text-white"><b>YOU LOSE</b></p>
+                    <a href="index.html"><button type="button" class="btn btn-lg btn-light text-danger">PLAY AGAIN</button></a>
+                </div>
+                <div id="win" class="col-4 my-auto d-none">
+                    <p class="display-4 text-white"><b>YOU WIN</b></p>
+                    <a href="index.html"><button type="button" class="btn btn-lg btn-light text-danger">PLAY AGAIN</button></a>
+                </div>
+                <div id="tie" class="col-4 my-auto d-none">
+                    <p class="display-4 text-white"><b>MATCH TIE</b></p>
+                    <a href="index.html"><button type="button" class="btn btn-lg btn-light text-danger">PLAY AGAIN</button></a>
+                </div>
+                <div class="col-4 order-2 order-md-3 mx-auto">
+                    <div class="d-flex flex-column">
+                        <div class="order-2 order-md-1">
+                            <h3 id="titleTwo" class="text-center text-white mb-5">THE HOUSE PICKED</h3>
+                        </div>
+                        <div id="two" class="order-1 order-md-2">
+                            <p class="round mx-auto"></p>
+                            <img src="images/icon-paper.svg" alt="paper" id="paper" class="d-none text-center respComp paper">
+                            <img src="images/icon-scissors.svg" alt="scissors" id="scissors" class="d-none text-center respComp scissors">
+                            <img src="images/icon-rock.svg" alt="rock" id="rock" class="d-none text-center respComp rock">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <button type="button" class="btn btn-outline-dark btn-lg px-4 margin text-white float-right" data-toggle="modal" data-target="#modal-element">Rules</button>
+
+        <div class="modal fade" id="modal-element" role="dialog">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">RULES</h4>
+                        <button type="button" class="close" data-dismiss="modal">
+                            <span>&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <img src="images/image-rules.svg" alt="rules" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Bootstrap Script Linkage -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script src="step2.js"></script>
+</body>
+</html>

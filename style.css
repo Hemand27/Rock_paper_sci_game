@@ -1,0 +1,113 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    
+    background: radial-gradient(circle, hsl(214, 47%, 23%), hsl(237, 49%, 15%));
+}
+
+.top{
+    border: 5px solid hsl(217, 16%, 45%);
+    border-radius: 15px;
+}
+
+.score{
+    color: hsl(229, 64%, 46%);
+}
+
+.score-block{
+    border-radius: 15px;
+}
+
+.triangle{
+    position: relative;
+    margin-top: 6rem;
+}
+
+.paper{
+    position: absolute;
+    bottom: 13rem;
+    left: 23rem;
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 120px;
+    border: 1.5rem solid hsl(230, 89%, 62%);
+}
+
+.scissors{
+    position: absolute;
+    left: 5rem;
+    bottom: 13rem;
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 120px;
+    border: 1.5rem solid hsl(39, 89%, 49%);
+}
+
+.rock{
+    position: absolute;
+    top: -5rem;
+    left: 13rem;
+    background-color: white;
+    padding: 2rem;
+    border-radius: 6rem;
+    border: 1.5rem solid hsl(349, 71%, 52%);
+}
+
+.margin{
+    margin: 10rem 3rem 0rem 0rem;
+}
+
+
+@media screen and (max-width: 375px){
+    .score{
+        font-size: 1rem;
+    }
+    .top{
+        margin-left: 0.9rem;
+        width: 22rem;
+    }
+    .triangle{
+        position: relative;
+        margin-top: 6rem;
+        width: 16rem;
+        left: 8px;
+        top: 10px;
+    }
+    
+    .paper{
+        position: absolute;
+        bottom: 9rem;
+        left: 2rem;
+        background-color: white;
+        padding: 1.5rem;
+        border-radius: 120px;
+        border: 1rem solid hsl(230, 89%, 62%);
+    }
+    
+    .scissors{
+        position: absolute;
+        left: 2.9rem;
+        bottom: 9rem;
+        background-color: white;
+        padding: 1.5rem;
+        border-radius: 120px;
+        border: 1rem solid hsl(39, 89%, 49%);
+    }
+    
+    .rock{
+        position: absolute;
+        top: -5rem;
+        left: 1rem;
+        background-color: white;
+        padding: 2rem;
+        border-radius: 6rem;
+        border: 1rem solid hsl(349, 71%, 52%);
+    }
+    .margin{
+        margin: 10rem 8rem 8rem 0rem;
+    }
+    
+}
